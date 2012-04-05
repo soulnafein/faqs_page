@@ -11,7 +11,7 @@
     <% @faq_entries.each do |entry| %>
       <div class='entry' id = 'entry-<%= entry.id %>' style='border-bottom: 1px solid #ddd; margin-top: 24px; padding-bottom: 24px'>
         <h3><%= entry.question %></h3>
-        <p><%= entry.answer %></p>
+        <p><%= simple_format(entry.answer) %></p>
       </div>
     <% end %>
   </div>
