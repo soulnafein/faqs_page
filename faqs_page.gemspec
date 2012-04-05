@@ -7,17 +7,16 @@ require "faqs_page/version"
 Gem::Specification.new do |s|
   s.name        = "faqs_page"
   s.version     = FaqsPage::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of FaqsPage."
-  s.description = "TODO: Description of FaqsPage."
+  s.authors     = ["David Santoro"]
+  s.email       = ["soulnafein@gmail.com"]
+  s.homepage    = "http://github.com/soulnafein"
+  s.summary     = "Rails engine that provide a simple FAQs page"
+  s.description = "Rails engine that provide a simple FAQs page"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.3"
-  # s.add_dependency "jquery-rails"
+  s.add_dependency "rails", "~> 3.2.1"
 
   s.add_development_dependency "sqlite3"
 end
