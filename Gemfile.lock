@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    faqs_page (0.0.2)
+    faqs_page (0.0.3)
       rails (~> 3.2.1)
 
 GEM

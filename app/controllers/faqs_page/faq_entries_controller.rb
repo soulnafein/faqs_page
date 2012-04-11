@@ -3,10 +3,11 @@ module FaqsPage
     def index
       category = Category.where(:name => params[:category]).first
 
-      @faq_entries = FaqEntry.order(:position)
 
       if category
-        @faq_entries = @faq_entries.where(:faqs_page_category_id => category.id)
+        @faq_entries = @faq_entries.where(:faqs_page_category_id => category.id).order(:position)
+      else
+        @faq_entries = FaqEntry.where(:faqs_page_category_id => nil).order(:position)
       end
     end
   end
