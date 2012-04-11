@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120405103413) do
+ActiveRecord::Schema.define(:version => 20120411143058) do
+
+  create_table "faqs_page_categories", :force => true do |t|
+    t.text "name"
+  end
 
   create_table "faqs_page_faq_entries", :force => true do |t|
     t.text     "question"
@@ -19,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120405103413) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "faqs_page_category_id"
   end
 
 end
