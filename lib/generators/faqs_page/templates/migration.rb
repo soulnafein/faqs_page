@@ -6,7 +6,7 @@ class CreateFaqEntriesTable < ActiveRecord::Migration
       t.integer  "position"
       t.datetime "created_at"
       t.datetime "updated_at"
-      t.integer  "faqs_page_category_id"
+      t.integer  "category_id"
     end
 
     create_table :faqs_page_categories do |t|
