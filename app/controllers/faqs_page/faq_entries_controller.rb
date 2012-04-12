@@ -5,9 +5,9 @@ module FaqsPage
 
 
       if category
-        @faq_entries = FaqEntry.where(:faqs_page_category_id => category.id).order(:position)
+        @faq_entries = FaqEntry.where(:category_id => category.id).order(:position)
       else
-        @faq_entries = FaqEntry.where(:faqs_page_category_id => nil).order(:position)
+        @faq_entries = FaqEntry.where(:category_id => nil).order(:position)
       end
     end
   end
