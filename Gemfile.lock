@@ -19,7 +19,7 @@ GIT
 PATH
   remote: .
   specs:
-    faqs_page (0.0.4)
+    faqs_page (0.0.7)
       rails (~> 3.2.1)
 
 GEM
