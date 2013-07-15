@@ -1,18 +1,24 @@
-<section class='faqs'>
-  <h1>Frequently asked questions</h1>
-  <ul>
-    <% @faq_entries.each do |entry| %>
-      <li>
-        <%= link_to entry.question, "#entry-#{entry.id}" %>
-      </li>
-    <% end %>
-  </ul>
-  <div class='entries' style='border-top: 1px solid #ddd'>
-    <% @faq_entries.each do |entry| %>
-      <div class='entry' id = 'entry-<%= entry.id %>' style='border-bottom: 1px solid #ddd; margin-top: 24px; padding-bottom: 24px'>
-        <h3><%= entry.question %></h3>
-        <p><%= raw(entry.answer) %></p>
-      </div>
-    <% end %>
-  </div>
-</section>
+<article class='main container_12'>
+  <header class="grid_12">
+    <h1>Frequently asked questions</h1>
+  </header>
+  <section class="grid_12">
+    <ul>
+      <% @faq_entries.each do |entry| %>
+        <li>
+          <%= link_to entry.question, "#entry-#{entry.id}" %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+  <section class="grid_12">
+    <div class='entries' style='border-top: 1px solid #ddd'>
+      <% @faq_entries.each do |entry| %>
+        <div class='entry' id = 'entry-<%= entry.id %>' style='border-bottom: 1px solid #ddd; margin-top: 24px; padding-bottom: 24px'>
+          <h3><%= entry.question %></h3>
+          <p><%= raw(entry.answer) %></p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</article>
